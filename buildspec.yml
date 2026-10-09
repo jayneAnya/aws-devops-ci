@@ -1,0 +1,30 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.12
+    commands:
+      - python --version
+      - pip install -r requirements.txt
+
+  pre_build:
+    commands:
+      - echo "Starting automated tests"
+
+  build:
+    commands:
+      - pytest -v
+      - python app.py
+
+  post_build:
+    commands:
+      - echo "Build completed successfully"
+
+artifacts:
+  files:
+    - app.py
+    - test_app.py
+    - requirements.txt
+    - buildspec.yml
+    - README.md
