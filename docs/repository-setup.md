@@ -35,10 +35,10 @@ git pull --ff-only origin main
 git push codecommit main
 ```
 
-For this update, the documentation and evidence were prepared on
-`docs/submission-evidence` and should be merged to GitHub `main` by pull
-request. After merging, synchronize `main` to CodeCommit so CodePipeline runs
-the updated source and packages the documentation and screenshots.
+For this update, the documentation and evidence are prepared on the
+`docs/submission-evidence` feature branch for pull-request review. Once merged
+to GitHub `main`, synchronize `main` to CodeCommit so CodePipeline runs the
+updated source and packages the documentation and screenshots.
 
 ## Evidence included
 

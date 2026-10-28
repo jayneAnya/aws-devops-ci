@@ -64,12 +64,14 @@ artifact bucket; the artifact is not published as a deployed application.
 
 - Submit the URL of your CodeCommit or GitHub repository (or an exported ZIP
   containing the source and `buildspec.yml`).
-- Capture a screenshot of a successful CodePipeline execution showing
-  **Succeeded** for both Source and Build.
-- The IAM role names and scoped permissions are documented above. This sample
-  uses no environment variables; do not include credentials or other secrets.
-- Capture evidence of the generated build artifact in the pipeline execution
-  or S3 artifact bucket.
+- The separate [AWS environment setup](./docs/aws-environment-setup.md)
+  documents the actual resources, IAM role permissions, tags, and CLI
+  verification commands.
+- [Repository setup](./docs/repository-setup.md) documents the GitHub
+  submission repository, CodeCommit pipeline source, and feature-branch
+  workflow.
+- AWS evidence is included in [`screenshots/`](./screenshots/): the successful
+  pipeline, CodeBuild run, and S3 build artifact.
 
-Screenshots are not included in this source repository; capture the successful
-execution and artifact view from the AWS console for submission.
+This sample uses no build environment variables. Do not include credentials or
+other secrets in the repository or screenshots.
