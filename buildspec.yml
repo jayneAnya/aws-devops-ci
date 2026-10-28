@@ -28,3 +28,5 @@ artifacts:
     - requirements.txt
     - buildspec.yml
     - README.md
+    - docs/*
+    - screenshots/*
