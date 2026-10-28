@@ -20,6 +20,10 @@ python app.py
 
 ## AWS setup
 
+For a complete, repeatable CLI walkthrough—including IAM policies, artifact
+bucket setup, pipeline creation, push triggers, verification, troubleshooting,
+and cleanup—see the [AWS setup guide](./docs/aws-setup-guide.md).
+
 The pipeline is configured in AWS region `eu-north-1` with these resources:
 
 | Resource | Name or configuration |
@@ -56,9 +60,10 @@ credentials or attach long-lived credentials to the project.
 The root [buildspec.yml](./buildspec.yml) uses CodeBuild buildspec version 0.2
 and Python 3.12. It installs `requirements.txt`, runs `pytest -v`, and executes
 `app.py`. A test failure fails the build. The declared build artifact contains
-the application, tests, dependency list, buildspec, and this README. In a
-pipeline, CodePipeline transports the CodeBuild action's output through its
-artifact bucket; the artifact is not published as a deployed application.
+the application, tests, dependency list, buildspec, this README, setup docs,
+and AWS evidence screenshots. In a pipeline, CodePipeline transports the
+CodeBuild action's output through its artifact bucket; the artifact is not
+published as a deployed application.
 
 ## Submission checklist
 
